@@ -9,9 +9,8 @@ export default function (state = [], action) {
             // we cannot mutate the state => cannot use 'return state.push(action.payload.data)'
             // we use concat() to return a new array
             // can use two approaches in a slightly different way:
-            return state.concat([action.payload.data]);
+            // return state.concat([action.payload.data]);
             return [action.payload.data, ...state]; // [ city3, city2, city1 ]
     }
-
     return state;
 };
